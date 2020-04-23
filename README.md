@@ -1,4 +1,4 @@
-Introduction au Framework Symfony 4 
+Introduction au Framework Symfony 5 
 =================================
 
 Ceci est le code d'exemple du cours introductif au Framework Symfony.
@@ -22,12 +22,5 @@ Ce repository est complémentaire des autres supports de cours.
 
 1. [La documentation officielle du Framework](http://symfony.com/doc/current/index.html) (documentation de référence)
 2. [Le turoriel introductif de Ryan Weaver](https://knpuniversity.com/screencast/symfony)
-3. [Le livre d'Alexandre Bacco](http://symfony.com/doc/current/index.html) 
-4. [Le tutoriel d'OpenClassrooms (en français)](https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-symfony)
-
-***Attention***, le livre ainsi que le tutoriel d'OpenClassrooms ont tous deux été créés pour la version 3 du framework. La structure des répertoire, l'organisation en bundle, la configuration des services et la procédure d'installation sont radicalement différents en Symfony 4. 
-Cependant, les chapitres concernant Twig, Doctrine ou les formulaires sont encore de bonnes références. 
 
 ***La documentation officielle reste la référence principale pour connaître l'état de l'art et les meilleures pratiques***
-
-## Code
