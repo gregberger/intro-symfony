@@ -1,0 +1,14 @@
+{
+  "name": "vuepress-deploy",
+  "version": "1.0.0",
+  "author": "Greg Berger <greg@3kd.be>",
+  "license": "MIT",
+  "dependencies": {
+    "vuepress": "^1.4.1"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev sources",
+    "docs:build": "vuepress build sources"
+  }
+
+}
