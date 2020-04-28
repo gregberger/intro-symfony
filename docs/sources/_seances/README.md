@@ -1,5 +1,5 @@
 ---
-title: Présentation et plannings de la séance
+title: Organisation et planning des séances
 --- 
 # Organisation des séances
 ## Planning

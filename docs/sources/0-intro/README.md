@@ -1,11 +1,7 @@
 ---
-title: Introduction
-sidebar: auto
-sidebarDepth: 2
-prev: false
-next: ./symfony
+title: Généralités
 ---
-# Introduction
+# Introduction : Généralités
 
 ## Qu'est-ce qu'un framework
 
