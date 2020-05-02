@@ -9,6 +9,16 @@ let getPath = path => {
 module.exports = {
     base: getPath(process.env.GITHUB_REPOSITORY),
     title: "Symfony 5",
+    configureWebpack: (config, isServer) => {
+      config.devServer = {
+        headers : {
+          "Access-Control-Allow-Origin": "*",
+          "X-Forwarded-For" : "Greg berger"
+      }};
+
+      if(! isServer){
+      }
+    },
     themeConfig: {
         displayAllHeaders: true,
         lastUpdated: 'Dernière mise à jour',
@@ -42,11 +52,20 @@ module.exports = {
           '/2-controllers-et-routes/',
           '/3-les-vues-avec-twig/'
         ],
-        sidebarDepth: 2
+        sidebarDepth: 1
     },
 
     markdown: {
         linkify: true,
-    }
+    },
+    plugins: [
+      [
+        'vuepress-plugin-container',
+        {
+          type: 'doc',
+          defaultTitle: 'Doc'
+        }
+      ]
+    ]
 
 };

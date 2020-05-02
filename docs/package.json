@@ -10,5 +10,4 @@
     "docs:dev": "vuepress dev sources",
     "docs:build": "vuepress build sources"
   }
-
 }
