@@ -46,3 +46,13 @@ title: Organisation et planning des séances
     - Erreurs et 404
     - L'objet `Request` en paramètres
     - Les sessions
+
+### Seance 3 : 04 mai 2020
+
+- Twig
+    - installation
+    - fonctionnalités de base : 
+        - syntaxe
+        - structure
+    - fonctions et filtres
+    - héritage de templates 

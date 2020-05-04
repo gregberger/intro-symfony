@@ -1,0 +1,12 @@
+{% extends 'blog/layout.html.twig' %}
+
+{% block title %}{{ article.title | capitalize }}{% endblock %}
+{% block page_title %}{{ article.title | capitalize }}{% endblock %}
+{% block first_row %}
+    <div class="col-md12">
+        <img src="{{ article.image }}">
+        <p>
+            {{ article.content }}
+        </p>
+    </div>
+{% endblock %}

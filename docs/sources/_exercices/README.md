@@ -23,3 +23,33 @@ mainTitle: Intro Symfony 5 - Exercices
     * configurer la route pour que l'utilisateur puisse définir la fourchette dans l'url 
     
             Exemple: /random-number/0/1000
+            
+
+## 04 mai 2020 : mise en place du template du projet
+
+::: tip objectifs 
+- Mise en pratique des concepts vus jusqu'à présent en particulier:
+    - Le routing
+    - Twig et l'héritage multiple au sein des templates
+    - Création de services et injection de dépendances 
+:::
+
+- créer un projet qui contiendra un blog => BlogController
+- utiliser un template existant https://startbootstrap.com/previews/clean-blog/
+    - le découper avec twig
+- Mettre en place les méthodes du controlleur 
+    - page d'index
+    - page de détail du blog
+    - (bonus: créer une page 'à propos') 
+- Créer un service qui doit: 
+    - Implémentanter une `ArticleRepositoryInterface` (que vous créerez également)
+    - Utiliser [Faker](https://packagist.org/packages/fzaninotto/faker) pour générer des fausses données
+- La structure d'un article : 
+   ```
+   Article:
+    - id
+    - title
+    - content
+    - image
+    - author
+    ```

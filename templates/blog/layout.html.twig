@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+    <header>
+        <div class="jumbotron">
+            <h1 class="display4">{% block page_title %}{% endblock %}</h1>
+        </div>
+    </header>
+{% endblock %}
+{% block body %}
+    <div class="container">
+            <div class="row">
+                {% block first_row %}
+                    <div class="col-md4">
+                        {% block col_left_content %}
+                        {% endblock %}
+                    </div>
+                    <div class="col-md8">
+                        {% block col_right_content %}
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+
+    </div>
+{% endblock %}
+{% block footer%}{% endblock %}

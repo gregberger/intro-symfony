@@ -1,0 +1,8 @@
+<li class="list-group-item gray {% if var.id is even %}even{% endif %}">
+    <div class="card">
+        <img src="{{ var.image }}" alt="{{ var.title }}" />
+        <div class="card-body">
+            <h5 class="card-title"><a href="{{ path('app_blog_show', {id: var.id} ) }}">{{ var.title }}</a></h5>
+        </div>
+    </div>
+</li>

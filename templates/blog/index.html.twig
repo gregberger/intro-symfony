@@ -1,0 +1,11 @@
+{% extends 'blog/layout.html.twig' %}
+
+{% block page_title %}{{ page_title | length }}{% endblock %}
+
+{% block col_left_content %}
+    <ul class="list-group">
+        {% for i in items %}
+            {% include 'blog/_partials/_list_element.html.twig' with {'var':i} %}
+        {% endfor %}
+    </ul>
+{% endblock %}
