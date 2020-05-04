@@ -5,22 +5,38 @@ title: Les vues - Twig comme moteur de templates
 
 # Les vues : Twig comme moteur de templates
 
-::: tip définition
-Un moteur de templates est 
-:::
+**Twig** est le moteur de template de prédilection de Symfony, il permet de construire les pages html de l’application. 
 
-## installation de twig
+Comme tous les autres composants, son utilisation au sein du framework est facultative et il est tout à fait possible de l’utiliser de manière indépendante.
+> https://twig.symfony.com
 
-## Fonctionnement de base
+## Installation dans une application Symfony
 
+    composer require template
+    
+<asciinema id="326225" rows="30"></asciinema>
+
+## Création des templates
+### Conventions de nommage
 ### Le répertoire `templates`
+### Variables
+### Liens entre les pages
+### Liens CSS et JS
 
-## Utilisation dans les controllers
+## Rendu des templates
+### Utilisation dans les controllers
+### Utilisation dans les services
 
-## Syntaxe
+## Réutilsation de templates
+### Include
+### Inclure un controller
+### Héritage et layouts 
 
-## L'héritage
-
-## Fonctions 
+## Fonctions et filtres
+> La liste complète des fonctions et filtres :
+>
+> https://twig.symfony.com/functions
+>
+>https://twig.symfony.com/filters
 
 

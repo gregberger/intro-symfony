@@ -3,10 +3,12 @@ title: Le framework Symfony
 ---
 
 # Introduction : Le framework Symfony
-::: doc
-Cet excellent article sur les bases de HTTP et du fonctionnement de Symfony :
-[https://symfony.com/doc/current/introduction/http_fundamentals.html](https://symfony.com/doc/current/introduction/http_fundamentals.html) 
-:::
+> 
+> Excellent article sur les bases de HTTP et du fonctionnement de Symfony :
+>
+> https://symfony.com/doc/current/introduction/http_fundamentals.html
+
+ 
 ## Qu'est-ce que Symfony
 [Symfony](https://symfony.com) est un framework PHP basé sur une architecture MVC créé en 2005 par Fabien Potencier. 
 Il est maintenu et distribué par la société parisienne Sensio Labs.
@@ -25,9 +27,10 @@ notre application (ex: si l’application n’utilise pas de formulaires ou de t
 Cette approche permet de conserver une application aussi légère que possible, d’améliorer les performances (vitesse de chargement, impact sur la mémoire) et d’éviter les failles de sécurité qui pourraient exister dans des composants qui ne sont pas utilisés.
 
 ## Les composants du framework Symfony
-::: doc
-[https://symfony.com/doc/current/components/index.html](https://symfony.com/doc/current/components/index.html)
-:::
+> Doc
+>
+> [https://symfony.com/doc/current/components/index.html](https://symfony.com/doc/current/components/index.html)
+
 
 Symfony n'est donc pas un logiciel monolithique. C'est une aggrégation de plusieurs bibliothèques
 apportant chacune des solutions à une problématique liée au développement d'applications web.

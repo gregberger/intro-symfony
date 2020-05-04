@@ -20,7 +20,7 @@ module.exports = {
       }
     },
     themeConfig: {
-        displayAllHeaders: true,
+        // displayAllHeaders: true,
         lastUpdated: 'Dernière mise à jour',
         nav: [
             {text: 'Home', link:"/"},
@@ -37,22 +37,26 @@ module.exports = {
                 ]
             },
             {text: 'Organisation', link:'/_seances/'},
-            {text: 'Exercices', link:'/_exercices/'}
+            {text: 'Exercices', link:'/_exercices/'},
+            {text: 'Références', link:'/_references/'}
         ],
         sidebar: [
           '/',
             {
                 title: 'Introduction',
                 path: '/0-intro/',
-                collapsable: true,
                 sidebarDepth: 1,
                 children: ['/0-intro/', '/0-intro/symfony']
             },
           '/1-developper-une-application/',
           '/2-controllers-et-routes/',
-          '/3-les-vues-avec-twig/'
+          '/3-les-vues-avec-twig/',
+          {
+            title: 'Références',
+            path: '/_references/'
+          }
         ],
-        sidebarDepth: 1
+        sidebarDepth: 2
     },
 
     markdown: {
