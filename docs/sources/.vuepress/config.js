@@ -48,7 +48,16 @@ module.exports = {
                 sidebarDepth: 1,
                 children: ['/0-intro/', '/0-intro/symfony']
             },
-          '/1-developper-une-application/',
+          {
+            title: 'Dévlopper une application',
+            path: '/1-developper-une-application/',
+            sidebarDepth: 1,
+            children: [
+              '/1-developper-une-application/',
+              '/1-developper-une-application/repertoires',
+              '/1-developper-une-application/outils'
+            ]
+          },
           '/2-controllers-et-routes/',
           '/3-les-vues-avec-twig/',
           {
