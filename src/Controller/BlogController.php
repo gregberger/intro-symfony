@@ -20,7 +20,7 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/blog", name="blog")
+     * @Route("/blog", name="blog_index")
      */
     public function index($name = "world")
     {

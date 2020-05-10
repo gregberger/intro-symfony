@@ -26,7 +26,7 @@ class DefaultController extends AbstractController {
      */
     public function index(){
 
-        return new Response('hello world');
+        return $this->redirectToRoute( 'blog_index');
     }
 
     /**

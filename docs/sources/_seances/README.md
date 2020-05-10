@@ -56,3 +56,7 @@ title: Organisation et planning des séances
         - structure
     - fonctions et filtres
     - héritage de templates 
+    
+> Séance >3bis : 09 mai 2020 
+>   liens vers javascripts et css dans twig
+>   utilisation de Faker dans un service Symfony
