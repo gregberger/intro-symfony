@@ -32,7 +32,8 @@ module.exports = {
                     ]},
                     {text: "2. Développer une application avec le framework Symfony", link:'/1-developper-une-application/'},
                     {text: '3. Controllers et Routes', link:'/2-controllers-et-routes/'},
-                    {text: '4. Vues : Twig le moteur de templates', link:'/3-les-vues-avec-twig/'}
+                    {text: '4. Vues : Twig le moteur de templates', link:'/3-les-vues-avec-twig/'},
+                    {text: '5. Modèle : l\'ORM Doctrine', link:'/4-doctrine/'}
 
                 ]
             },
@@ -75,6 +76,17 @@ module.exports = {
             ]
           },
           '/3-les-vues-avec-twig/',
+          {
+            title: 'Modèle: l\'ORM Doctrine',
+            path: '/4-doctrine/',
+            sidebarDepth: 1,
+            children: [
+              '/4-doctrine/',
+              '/4-doctrine/intro',
+              '/4-doctrine/relations',
+              '/4-doctrine/query-builder'
+            ]
+          },
           {
             title: 'Références',
             path: '/_references/'

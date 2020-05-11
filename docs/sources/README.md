@@ -8,8 +8,7 @@ actionLink: /0-intro/
 ---
 
 ## Accès direct
-
-* [Organisation du cours](/_seances/)
+* [Organisation du cours](/_infos/)
 * [Exercices](/_exercices/)
 
 

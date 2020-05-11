@@ -41,5 +41,5 @@ Je ne peux que vous conseiller de vous entrainer à faire l'exercice plusieurs f
 - Une visio conférence de groupe sera organisée dans l'application Teams de Microsoft, vous vous y connecterez à l'heure.
 - Je resterai connecté et disponible pour toute question par **message écrit**. Si j'estime que la question est pertinente pour le groupe, j'y répondrai oralement
 - Au terme des 4 heures que durera l'évaluation, vous devrez m'avoir transmis l'url vers votre repository github.  
-- Pour la correction, je ne prendrai en compte que les commits effectués avant l'heure de la fin de l'évaluation
+- Pour la correction, je ne prendrai en compte que les commits effectués avant l'heure de la fin de l'évaluation 
 

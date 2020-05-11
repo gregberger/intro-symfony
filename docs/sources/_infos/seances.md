@@ -74,8 +74,7 @@ title: Organisation et planning des séances
 - partie 2 Présentation de Doctrine
     - Qu'est-ce qu'un ORM ?
     - Installation de Doctrine
+    - Doctrine Migrations
     - Création d'un classes Entity simple
         - Les annotations Doctrine
-    - Doctrine Migrations
-    - Data Fixtures
-    - CRUD avec Doctrine dans Symfony
+   **** - CRUD avec Doctrine dans Symfony

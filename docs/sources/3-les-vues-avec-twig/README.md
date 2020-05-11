@@ -1,5 +1,5 @@
 ---
-title: Les vues - Twig comme moteur de templates 
+title: "Vues: Twig comme moteur de templates" 
 
 ---
 
