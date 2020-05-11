@@ -1,7 +1,7 @@
 ---
 title: Généralités
 ---
-# Introduction : Généralités
+# Généralités
 
 ## Qu'est-ce qu'un framework ?
 

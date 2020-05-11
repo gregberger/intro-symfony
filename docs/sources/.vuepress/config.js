@@ -36,7 +36,13 @@ module.exports = {
 
                 ]
             },
-            {text: 'Organisation', link:'/_seances/'},
+            {text: 'Infos pratiques', ariaLabel: 'Orga Menu',
+              items: [
+                {text: 'Planning', link: '/_infos/seances'},
+                {text: 'Evaluation', link: '/_infos/evaluation'}
+              ]
+
+            },
             {text: 'Exercices', link:'/_exercices/'},
             {text: 'Références', link:'/_references/'}
         ],
@@ -58,12 +64,31 @@ module.exports = {
               '/1-developper-une-application/outils'
             ]
           },
-          '/2-controllers-et-routes/',
+          {
+            title: 'Routes et Contrôleurs',
+            path: '/2-controllers-et-routes/',
+            sidebarDepth: 1,
+            children: [
+               '/2-controllers-et-routes/',
+               '/2-controllers-et-routes/routes',
+               '/2-controllers-et-routes/controllers'
+            ]
+          },
           '/3-les-vues-avec-twig/',
           {
             title: 'Références',
             path: '/_references/'
+          },
+          {
+            title: 'Exemples',
+            path: '/_tips/',
+            sidebarDepth: 0,
+            children: [
+              '/_tips/faker'
+            ]
+
           }
+
         ],
         sidebarDepth: 2
     },

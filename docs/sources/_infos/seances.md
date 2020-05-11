@@ -2,14 +2,16 @@
 title: Organisation et planning des séances
 --- 
 
+[[toc]]
+
 # Organisation des séances
 ## Planning
 |dates  |matiere|
 --------|-------|
 [2020-04-20](./#seance-1-20-avril-2020) | Introduction aux Frameworks, Présentation des concepts : `Kernel.php`, `Routing`, `Controller`, `Response`, `Request` et création d'un projet Symfony
 [2020-04-27](./#seance-2-27-avril-2020) | Les vues : Présentation du moteur de template : `Twig` + Introduction au `Service Container` + `MakerBundle`  
-[2020-05-04] | Application des concepts : Mise en place du projet d'exemple
-[2020-05-11] | Le modèle : Présentation de `Doctrine` : concepts : `ORM`, `Entity`, `Migrations`, `Fixtures`
+[2020-05-04](./#seance-3-04-mai-2020) | Application des concepts : Mise en place du projet d'exemple
+[2020-05-11](./#seance-4-11-mai-2020) | Le modèle : Présentation de `Doctrine` : concepts : `ORM`, `Entity`, `Migrations`, `Fixtures`
 [2020-05-18] | Le modèle : Présentation de `Doctrine` : Les Relations + les `Repositories` et requêtes avancées (`QueryBuilder`) 
 [2020-05-25] | Présentation du composant `Form` : les formulaires: création, traitement et validation
 [2020-06-05] | Sécuriser son application et gestion des roles utilisateurs
@@ -60,3 +62,20 @@ title: Organisation et planning des séances
 > Séance >3bis : 09 mai 2020 
 >   liens vers javascripts et css dans twig
 >   utilisation de Faker dans un service Symfony
+
+### Séance 4 : 11 mai 2020
+
+- partie 1
+    - Réponses aux questions sur l'Exercice
+    - Précisions Twig :
+        - Lien vers css et html : la fonction asset
+    - Présentation de la barre d'outils de debug de Symfony
+    
+- partie 2 Présentation de Doctrine
+    - Qu'est-ce qu'un ORM ?
+    - Installation de Doctrine
+    - Création d'un classes Entity simple
+        - Les annotations Doctrine
+    - Doctrine Migrations
+    - Data Fixtures
+    - CRUD avec Doctrine dans Symfony

@@ -30,8 +30,9 @@ Les packages officiels: https://symfony.sh
 
 <asciinema id="vP3FquYnAOAGUDQhmmcFxKAii" rows="20"></asciinema>
 
-Le **profiler-pack** permet d'installer la debug toolbar de Symfony. Pour ce faire, Twig, le moteur de templates est un prérequis.
+Le **profiler-pack** permet d'installer la debug toolbar de Symfony: un outil puissant et pratique aidant au développement en fournissant de nombreuses informations sur l'application
 
+Twig, le moteur de templates est une dépendance de ce pack.
 On constate dans l'exemple que Twig a bien été installé, et qu'un certain nombre de fichiers et répertoires ont été créés par la recipe (ex. `config/routes/dev/web_profiler.yaml`)
 
 ## L'outil console
