@@ -11,7 +11,7 @@ namespace App\Services;
 use App\Entity\BlogArticle;
 use Faker\Generator;
 
-class ArticlesRepository implements ArticlesRepositoryInterface {
+class ArticlesGenerator implements ArticlesRepositoryInterface {
 
     /**
      * @var Generator
@@ -73,7 +73,7 @@ class ArticlesRepository implements ArticlesRepositoryInterface {
         $article = new BlogArticle();
         $article->setTitle($this->faker->words(7, true))
                 ->setSubtitle($this->faker->words(5, true) )
-                ->setAuthor( $this->faker->name)
+                // ->setAuthor( $this->faker->name)
                 ->setImage( $this->faker->imageUrl(300,200))
                 ->setContent($this->faker->paragraphs(5, true))
         ;

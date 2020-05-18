@@ -2,9 +2,16 @@
 
 {% block title %}{{ article.title | capitalize }}{% endblock %}
 {% block page_title %}{{ article.title | capitalize }}{% endblock %}
+{% block author %}
+
+{% endblock %}
 {% block first_row %}
     <div class="col-md12">
+        <h3 class="meta">Posted by
+              <a href="#">{{ article.author.name }}</a>
+              on August 24, 2019</h3>
         <img src="{{ article.image }}">
+
         <p>
             {{ article.content }}
         </p>

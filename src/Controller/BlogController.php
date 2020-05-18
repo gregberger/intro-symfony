@@ -2,8 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Author;
 use App\Entity\BlogArticle;
-use App\Services\ArticlesRepository;
+use App\Services\ArticlesGenerator;
 use App\Services\ArticlesRepositoryInterface;
 use Faker\Generator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -47,12 +48,32 @@ class BlogController extends AbstractController
     /**
      * @Route("/articles/{id<\d+>}", name="show")
      */
-    public function show($id, BlogArticle $article, Request $request){
-
-        if($article === null){
-           throw $this->createNotFoundException("Article not found");
-        }
+    public function show(BlogArticle $article, Request $request){
+        // $article = $this->getDoctrine()->getRepository( BlogArticle::class)->find( $id);
         return $this->render('blog/article.html.twig', ['article'=>$article, 'page_title'=>$article->getTitle()]);
+    }
+
+    /**
+     * @Route("/update/{id}", name="update")
+     */
+    public function updateArticle( BlogArticle $article ) {
+        $article->setAuthor( "The magnificent Guillaume");
+        $em = $this->getDoctrine()->getManager();
+        $em->persist( $article);
+        $em->flush();
+
+        return $this->render( 'blog/article.html.twig', ['article'=>$article, 'page_title'=>$article->getTitle()]);
+    }
+
+    /**
+     * @Route("/delete/{id}", name="delete")
+     */
+    public function deleteArticle( BlogArticle $article ) {
+        $em = $this->getDoctrine()->getManager();
+        $em->remove( $article);
+        $em->flush();
+
+        return $this->redirectToRoute( 'app_blog_index');
     }
 
 
@@ -60,16 +81,22 @@ class BlogController extends AbstractController
      * @return Response
      * @Route("/create", name="create")
      */
-    public function createArticle(ArticlesRepository $articlesGenerator) {
+    public function createArticle(ArticlesGenerator $articlesGenerator) {
         $em = $this->getDoctrine()->getManager();
 
        $article = $articlesGenerator->generateArticleEntity();
-
+       $auth = new Author();
+       $auth->setName( 'Lorem Ipsum');
+       $em->persist( $auth);
+       $article->setAuthor($auth);
+        
         $em->persist( $article);
 
         $em->flush();
 
-        return $this->redirectToRoute( 'app_blog_index');
+        return $this->redirectToRoute( 'app_blog_show', ['id'=>$article->getId()]);
 
     }
+
+
 }

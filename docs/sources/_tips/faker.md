@@ -68,7 +68,7 @@ services:
 ## Utilisation dans un autre service
  
 ex. `App\Services\ArticleRepository` 
-> créer la classe dans `src/Services/ArticlesRepository.php` 
+> créer la classe dans `src/Services/ArticlesGenerator.php` 
 
 Injecter Faker dans le constructeur de la classe : 
 
