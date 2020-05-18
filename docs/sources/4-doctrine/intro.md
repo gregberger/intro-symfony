@@ -52,11 +52,87 @@ Une fois que la classe est correctement configurée, il faut pouvoir mettre à j
 
 ## Persister des objets en DB
 
-### Validation des objets
+Pour manipuler les entités (CRUD => Create, Retrieve, Update, Delete), Doctrine met à disposition deux classes `EntityManager` et `ServiceEntityRepository`.
+Ces classes sont rendues disponibles au sein des controllers qui étendent `AbstractController` via la méthode `$this->getDoctrine()`
+
+Pour créer un nouvel objet et le sauvegarder en DB (au sein d'un controller):
+```php
+use \Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\BlogArticle;
+use Symfony\Component\HttpFoundation\Response;
+
+class BlogController extends AbstractController {
+    public function createArticle(): Response
+    {
+        $article = new BlogArticle();
+        $article->setTitle("Mon titre");
+        $article->setContent("Le contenu de mon article");
+        // définir tous les champs nécessaires...
+        // pour persister l'article en question, 
+        // récupérer l'entityManager
+        $entityManager = $this->getDoctrine()->getManager();
+        // Utiliser la méthode persist
+        $entityManager->persist($article);
+        
+        // envoyer les changements à la DB
+        $entityManager->flush();
+        
+        // renvoyer une réponse
+        return new Response("nouvel article créé : ".$article->getId()); 
+    }
+}
+```
 
 ## Récupérer des objets en DB
 
+Pour récupérer un objet à partir de sa clé primaire :
+
+```php
+use \Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\BlogArticle;
+use Symfony\Component\Routing\Annotation\Route;
+
+class BlogController extends AbstractController {
+    /**
+     * @Route("/blog/articles/{id}", name="app_blog_article_show")
+    **/
+    public function showArticle($id){
+        $article = $this->getDoctrine()
+                    ->getRepository(BlogArticle::class)
+                    ->find($id);
+    
+        return $this->render('blog/article.html.twig', ['article' => $article]);
+    
+    }
+}
+```
+
 ## Récupération automatique d'objets : Le Param Converter
+Symfony propose également de récupérer automatiquement un objet en DB en utilisant l'injection de dépendances et un mécanisme nommé le `ParamConverter`
+
+> [documentation ParamConverter](https://symfony.com/doc/current/doctrine.html#automatically-fetching-objects-paramconverter) 
+
+
+```php
+use \Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\BlogArticle;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
+
+class BlogController extends AbstractController {
+    /**
+     * @Route("/blog/articles/{id}", name="app_blog_article_show")
+    **/
+    public function showArticle(BlogArticle $article, Request $request){
+        // sur base de la même route comprenant l'id de l'objet,
+        // Symfony est capable d'appeler lui-même la méthode de l'ORM permettant de récupérer cet objet
+        return $this->render('blog/article.html.twig', ['article' => $article]);
+    }
+}
+```
+
+## Update d'objets
+
 
 ## Supprimer des objets
 

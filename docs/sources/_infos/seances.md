@@ -12,7 +12,7 @@ title: Organisation et planning des séances
 [2020-04-27](./#seance-2-27-avril-2020) | Les vues : Présentation du moteur de template : `Twig` + Introduction au `Service Container` + `MakerBundle`  
 [2020-05-04](./#seance-3-04-mai-2020) | Application des concepts : Mise en place du projet d'exemple
 [2020-05-11](./#seance-4-11-mai-2020) | Le modèle : Présentation de `Doctrine` : concepts : `ORM`, `Entity`, `Migrations`, `Fixtures`
-[2020-05-18] | Le modèle : Présentation de `Doctrine` : Les Relations + les `Repositories` et requêtes avancées (`QueryBuilder`) 
+[2020-05-18](./#seance-5-18-mai-2020) | Le modèle : Présentation de `Doctrine` : Les Relations + les `Repositories` et requêtes avancées (`QueryBuilder`) 
 [2020-05-25] | Présentation du composant `Form` : les formulaires: création, traitement et validation
 [2020-06-05] | Sécuriser son application et gestion des roles utilisateurs
 [2020-06-08] | Gestion des, assets frontend avec `Webpack Encore`
@@ -71,10 +71,26 @@ title: Organisation et planning des séances
         - Lien vers css et html : la fonction asset
     - Présentation de la barre d'outils de debug de Symfony
     
-- partie 2 Présentation de Doctrine
+- partie 2 : Présentation de Doctrine
     - Qu'est-ce qu'un ORM ?
     - Installation de Doctrine
     - Doctrine Migrations
     - Création d'un classes Entity simple
         - Les annotations Doctrine
-   **** - CRUD avec Doctrine dans Symfony
+        - CRUD avec Doctrine dans Symfony 
+        
+### Séance 5 : 18 mai 2020
+
+- partie 1
+    - Réponses aux questions
+    - Rappels : 
+        - création entité
+        - CRUD de base
+        - Param Converter
+
+- partie 2 :
+    - Mettre et supprimer des objets
+    - les Data Fixtures
+    - Les relations entre entités
+        - One to Many / Many to One
+        - Many to many   

@@ -7,7 +7,7 @@ title: "Généralités"
 ## Documentation
 
 * https://symfony.com/doc/current/doctrine.html 
-* 
+* Les data fixtures : https://symfony.com/doc/master/bundles/DoctrineFixturesBundle/index.html
 
 ## Contenu
 
