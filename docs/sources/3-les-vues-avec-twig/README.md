@@ -16,6 +16,11 @@ Comme tous les autres composants, son utilisation au sein du framework est facul
     
 <asciinema id="326225" rows="30"></asciinema>
 
+
+Pour voir la liste des commandes mises à disposition par Twig :
+
+    php bin/console debug:twig 
+
 ## Création des templates
 ### Conventions de nommage
 ### Le répertoire `templates`

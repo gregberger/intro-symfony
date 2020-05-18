@@ -8,6 +8,7 @@
 
 namespace App\Services;
 
+use App\Entity\BlogArticle;
 use Faker\Generator;
 
 class ArticlesRepository implements ArticlesRepositoryInterface {
@@ -61,8 +62,21 @@ class ArticlesRepository implements ArticlesRepositoryInterface {
     public function generateArticle(){
         return [
             'title' => $this->faker->words(7, true),
+            'subtitle' => $this->faker->words(5, true),
+            'author' => $this->faker->name,
+            'pubDate' => $this->faker->dateTimeBetween('-2 years', 'now')->format('l F Y'),
             'image' => $this->faker->imageUrl(600, 400),
             'content' => $this->faker->paragraphs(5, true)
         ];
+    }
+    public function generateArticleEntity(){
+        $article = new BlogArticle();
+        $article->setTitle($this->faker->words(7, true))
+                ->setSubtitle($this->faker->words(5, true) )
+                ->setAuthor( $this->faker->name)
+                ->setImage( $this->faker->imageUrl(300,200))
+                ->setContent($this->faker->paragraphs(5, true))
+        ;
+        return $article;
     }
 }

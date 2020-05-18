@@ -26,7 +26,7 @@ class DefaultController extends AbstractController {
      */
     public function index(){
 
-        return $this->redirectToRoute( 'blog_index');
+        return $this->redirectToRoute( 'app_blog_index');
     }
 
     /**

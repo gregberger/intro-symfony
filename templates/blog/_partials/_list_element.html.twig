@@ -1,3 +1,21 @@
+<div class="post-preview">
+      <a href="{{ path('app_blog_show', {id: var.id} ) }}">
+        <h2 class="post-title">
+          {{ var.title }}
+        </h2>
+        <h3 class="post-subtitle">
+          {{ var.subtitle }}
+        </h3>
+      </a>
+      <p class="post-meta">Posted by
+        <a href="#">{{ var.author }}</a>
+      {% if var.pubDate is defined %}
+        on {{ var.pubDate }}
+      {% endif %}
+      </p>
+</div>
+
+{#
 <li class="list-group-item gray {% if var.id is even %}even{% endif %}">
     <div class="card">
         <img src="{{ var.image }}" alt="{{ var.title }}" />
@@ -6,3 +24,4 @@
         </div>
     </div>
 </li>
+#}

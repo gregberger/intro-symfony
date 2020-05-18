@@ -3,9 +3,9 @@
 {% block page_title %}{{ page_title }}{% endblock %}
 
 {% block col_left_content %}
-    <ul class="list-group">
+    <div class="col-lg-8 col-md-10 mx-auto">
         {% for i in items %}
             {% include 'blog/_partials/_list_element.html.twig' with {'var':i} %}
+            <hr>
         {% endfor %}
-    </ul>
 {% endblock %}
