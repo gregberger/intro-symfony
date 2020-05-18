@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Doctrine, les relations entre entités | Symfony 5</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/intro-symfony/assets/css/0.styles.802f7288.css" as="style"><link rel="preload" href="/intro-symfony/assets/js/app.c5613cc0.js" as="script"><link rel="preload" href="/intro-symfony/assets/js/2.32c20540.js" as="script"><link rel="preload" href="/intro-symfony/assets/js/18.b7d49a6a.js" as="script"><link rel="prefetch" href="/intro-symfony/assets/js/10.7a48bf67.js"><link rel="prefetch" href="/intro-symfony/assets/js/11.d6d6186d.js"><link rel="prefetch" href="/intro-symfony/assets/js/12.cf58528b.js"><link rel="prefetch" href="/intro-symfony/assets/js/13.51745c1b.js"><link rel="prefetch" href="/intro-symfony/assets/js/14.8030e0c0.js"><link rel="prefetch" href="/intro-symfony/assets/js/15.0661bd88.js"><link rel="prefetch" href="/intro-symfony/assets/js/16.e3abad96.js"><link rel="prefetch" href="/intro-symfony/assets/js/17.425533e8.js"><link rel="prefetch" href="/intro-symfony/assets/js/19.3b66b076.js"><link rel="prefetch" href="/intro-symfony/assets/js/20.ed67e9d7.js"><link rel="prefetch" href="/intro-symfony/assets/js/21.0445fcf9.js"><link rel="prefetch" href="/intro-symfony/assets/js/22.d6f4e492.js"><link rel="prefetch" href="/intro-symfony/assets/js/23.ac666944.js"><link rel="prefetch" href="/intro-symfony/assets/js/24.8af6fae6.js"><link rel="prefetch" href="/intro-symfony/assets/js/25.b3fdb5e4.js"><link rel="prefetch" href="/intro-symfony/assets/js/26.08ccc245.js"><link rel="prefetch" href="/intro-symfony/assets/js/27.ddf308b8.js"><link rel="prefetch" href="/intro-symfony/assets/js/3.79dd08a4.js"><link rel="prefetch" href="/intro-symfony/assets/js/4.49eadb4e.js"><link rel="prefetch" href="/intro-symfony/assets/js/5.99f2def5.js"><link rel="prefetch" href="/intro-symfony/assets/js/6.d0fb1724.js"><link rel="prefetch" href="/intro-symfony/assets/js/7.dd9779d1.js"><link rel="prefetch" href="/intro-symfony/assets/js/8.0224412b.js"><link rel="prefetch" href="/intro-symfony/assets/js/9.8bed0ea1.js">
+    <link rel="stylesheet" href="/intro-symfony/assets/css/0.styles.802f7288.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/intro-symfony/" class="home-link router-link-active"><!----> <span class="site-name">Symfony 5</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/intro-symfony/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Cours Menu" class="dropdown-title"><span class="title">Cours</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          1. Introduction : 
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/intro-symfony/0-intro/" class="nav-link">
+  └ Généralités
+</a></li><li class="dropdown-subitem"><a href="/intro-symfony/0-intro/symfony.html" class="nav-link">
+  └ Le framework Symfony
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/intro-symfony/1-developper-une-application/" class="nav-link">
+  2. Développer une application avec le framework Symfony
+</a></li><li class="dropdown-item"><!----> <a href="/intro-symfony/2-controllers-et-routes/" class="nav-link">
+  3. Controllers et Routes
+</a></li><li class="dropdown-item"><!----> <a href="/intro-symfony/3-les-vues-avec-twig/" class="nav-link">
+  4. Vues : Twig le moteur de templates
+</a></li><li class="dropdown-item"><!----> <a href="/intro-symfony/4-doctrine/" class="nav-link router-link-active">
+  5. Modèle : l'ORM Doctrine
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Orga Menu" class="dropdown-title"><span class="title">Infos pratiques</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/intro-symfony/_infos/seances.html" class="nav-link">
+  Planning
+</a></li><li class="dropdown-item"><!----> <a href="/intro-symfony/_infos/evaluation.html" class="nav-link">
+  Evaluation
+</a></li></ul></div></div><div class="nav-item"><a href="/intro-symfony/_exercices/" class="nav-link">
+  Exercices
+</a></div><div class="nav-item"><a href="/intro-symfony/_references/" class="nav-link">
+  Références
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/intro-symfony/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Cours Menu" class="dropdown-title"><span class="title">Cours</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          1. Introduction : 
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/intro-symfony/0-intro/" class="nav-link">
+  └ Généralités
+</a></li><li class="dropdown-subitem"><a href="/intro-symfony/0-intro/symfony.html" class="nav-link">
+  └ Le framework Symfony
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/intro-symfony/1-developper-une-application/" class="nav-link">
+  2. Développer une application avec le framework Symfony
+</a></li><li class="dropdown-item"><!----> <a href="/intro-symfony/2-controllers-et-routes/" class="nav-link">
+  3. Controllers et Routes
+</a></li><li class="dropdown-item"><!----> <a href="/intro-symfony/3-les-vues-avec-twig/" class="nav-link">
+  4. Vues : Twig le moteur de templates
+</a></li><li class="dropdown-item"><!----> <a href="/intro-symfony/4-doctrine/" class="nav-link router-link-active">
+  5. Modèle : l'ORM Doctrine
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Orga Menu" class="dropdown-title"><span class="title">Infos pratiques</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/intro-symfony/_infos/seances.html" class="nav-link">
+  Planning
+</a></li><li class="dropdown-item"><!----> <a href="/intro-symfony/_infos/evaluation.html" class="nav-link">
+  Evaluation
+</a></li></ul></div></div><div class="nav-item"><a href="/intro-symfony/_exercices/" class="nav-link">
+  Exercices
+</a></div><div class="nav-item"><a href="/intro-symfony/_references/" class="nav-link">
+  Références
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/intro-symfony/" class="sidebar-link">Home</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/intro-symfony/0-intro/" class="sidebar-heading clickable"><span>Introduction</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/intro-symfony/1-developper-une-application/" class="sidebar-heading clickable"><span>Dévlopper une application</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/intro-symfony/2-controllers-et-routes/" class="sidebar-heading clickable"><span>Routes et Contrôleurs</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/intro-symfony/3-les-vues-avec-twig/" class="sidebar-link">Vues: Twig comme moteur de templates</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/intro-symfony/4-doctrine/" class="sidebar-heading clickable router-link-active open"><span>Modèle: l'ORM Doctrine</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/intro-symfony/4-doctrine/" class="sidebar-link">Généralités</a></li><li><a href="/intro-symfony/4-doctrine/intro.html" class="sidebar-link">Doctrine, principes de base</a></li><li><a href="/intro-symfony/4-doctrine/relations.html" class="active sidebar-link">Doctrine, les relations entre entités</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/intro-symfony/4-doctrine/relations.html#deux-types-de-relations" class="sidebar-link">Deux types de relations</a></li></ul></li><li><a href="/intro-symfony/4-doctrine/query-builder.html" class="sidebar-link">Doctrine, repositories et Query Builder</a></li></ul></section></li><li><a href="/intro-symfony/_references/" class="sidebar-link">Références</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/intro-symfony/_tips/" class="sidebar-heading clickable"><span>Exemples</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="doctrine-les-relations-entre-entites"><a href="#doctrine-les-relations-entre-entites" class="header-anchor">#</a> Doctrine, les relations entre entités</h1> <blockquote><p><a href="https://symfony.com/doc/current/doctrine/associations.html" target="_blank" rel="noopener noreferrer">Documentation<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <blockquote><p>There are two main relationship/association types:
+<strong>ManyToOne / OneToMany</strong>
+The most common relationship, mapped in the database with a foreign key column (e.g. a category_id column on the product table).
+This is actually just one association type, but seen from the two different sides of the relation.
+<strong>ManyToMany</strong>
+Uses a join table and is needed when both sides of the relationship can have many of the other side (e.g. &quot;students&quot; and &quot;classes&quot;:
+each student is in many classes, and each class has many students).
+First, you need to determine which relationship to use. If both sides of the relation will contain many of the other side (e.g. &quot;students&quot; and &quot;classes&quot;), you need a ManyToMany relation. Otherwise, you likely need a ManyToOne.</p></blockquote> <p>Doctrine permet de modéliser les relations entre entités à l'aide d'annotations ou de la commande <code>make:entity</code></p> <h2 id="deux-types-de-relations"><a href="#deux-types-de-relations" class="header-anchor">#</a> Deux types de relations</h2> <p>Il existe principalement deux types de relations :</p> <h3 id="manytoone-onetomany"><a href="#manytoone-onetomany" class="header-anchor">#</a> <strong>ManyToOne / OneToMany</strong></h3> <p>La relation la plus courante, représentée en DB par une clé étrangère (par exemple, une colonne <code>category_id</code> dans une table <code>produits</code>).</p> <p>Il s'agit dans les faits d'une seule relation pouvant être envisagée à partir de chacune des entités la composant :</p> <ul><li>Un produit a une seule catégorie =&gt; <code>ManyToOne</code> du point de vue de la table : plusieurs produits différents [<strong>many</strong>] peuvent avoir une même catégorie [<strong>one</strong>]</li> <li>Une catégorie a plusieurs produits =&gt; <code>OneToMany</code></li></ul> <h3 id="manytomany"><a href="#manytomany" class="header-anchor">#</a> <strong>ManyToMany</strong></h3> <p>Utilise une table de jointure et est nécéssaire lorsque chacun des côtés d'une relation peut avoir plusieurs entités de l'autre côté</p> <p>par exemple &quot;étudiants&quot; et &quot;cours&quot; : chaque étudiant peut suivre plusieurs cours, et chaque cours a plusieurs étudiants.</p> <p>Pour déterminer le type de relation à utiliser, savoir si chaque côté va contenir plusieurs de l'autre (étudiants et cours) dans ce cas, ce sera une <code>ManyToMany</code>. Dans le cas contraire, on utilisera une <code>ManyToOne</code></p> <div class="custom-block tip"><p class="custom-block-title">NB</p> <p>La relation <code>OneToOne</code> existe également, mais dans l'usage, elle est identique à <code>OneToMany</code></p></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Dernière mise à jour:</span> <span class="time">5/18/2020, 7:42:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/intro-symfony/4-doctrine/intro.html" class="prev">
+        Doctrine, principes de base
+      </a></span> <span class="next"><a href="/intro-symfony/4-doctrine/query-builder.html">
+        Doctrine, repositories et Query Builder
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/intro-symfony/assets/js/app.c5613cc0.js" defer></script><script src="/intro-symfony/assets/js/2.32c20540.js" defer></script><script src="/intro-symfony/assets/js/18.b7d49a6a.js" defer></script>
+  </body>
+</html>
