@@ -53,3 +53,30 @@ mainTitle: Intro Symfony 5 - Exercices
     - image
     - author
     ```
+  
+## 18 mai 2020 : Relations Doctrine
+
+Sur base du code produit jusqu'à présent, ajouter une entité Category liée aux articles sur le même principe que les auteurs
+
+    Article ----> has many ----> Category
+    
+Une entité Category est composée des champs suivants :
+```
+    Category:
+    - id : int (Auto-Increment)
+    - name: varchar(255)
+    - description: text
+    - imageUrl: varchar(255)
+    [- articles: ArrayCollection]*
+   
+    *code doctrine    
+```
+
+Ajouter programmatiquement des catégories en DB ainsi qu'aux Articles à l'aide des Data Fixtures de Doctrine 
+
+Pour l'affichage: 
+
+- Une page `/blog/categories` permettant d'afficher les différentes catégories
+- Chaque catégorie aura sa propre page détail `/blog/categories/{id}` qui affiche l'image de la catégorie, sa description 
+ainsi qu'une liste des articles de cette catégorie
+- Sur la page détail d'un article, afficher le nom de la catégorie sous forme de lien vers la page détail de la catégorie
